@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bate-Papo UOL</title>
+    <title>Batepapo UOL</title>
     <link rel="stylesheet" href="reset.css">
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
@@ -12,24 +12,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="Images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="Images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="Images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="Images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="Images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="Images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="Images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="Images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="Images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="Images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <section class="main-page">
+    <section class="entry-screen">
+        <img src="Images/logo 1.png" alt="logo" class="logo-entry-screen">
+        <input data-identifier="enter-name" type="text" id="entry-input" placeholder="Digite seu nome">
+        <button data-identifier="start" id="entry-button" onclick="startApp()">Entrar</button>
+    </section>
+    <section class="main-page hidden">
         <header>
             <div class="header-container">
                 <img src="Images/logo 1.png" alt="logo" class="logo">
                 <ion-icon name="people" classe="people"></ion-icon>
             </div>
         </header>
-        <main></main>        
+        <main></main>
         <footer>
             <div class="footer-container">
                 <input id="message-input" type="text" placeholder="Escreva aqui...">
-                <ion-icon id="send-button" name="paper-plane-outline" class="paper-plane"></ion-icon>
+                <ion-icon id="send-button" onclick="sendMessage()" name="paper-plane-outline" class="paper-plane"></ion-icon>
             </div>
         </footer>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="script.js"></script>
+    
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="script.js"></script>
 </body>
 </html>

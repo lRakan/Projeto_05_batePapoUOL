@@ -1,92 +1,192 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-
+.hidden {
+  display: none;
+}
 body {
-    background-color: #e5e5e5;
+  background-color: #e5e5e5;
 }
-
 header {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    height: 80px;
-    width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
-    z-index: 2;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 80px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+  z-index: 2;
 }
-
 header .header-container {
-    position: fixed;
-    left: 22px;
-    right: 22px;
-    top: 16px;
-    bottom: 11px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 43px;
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  top: 16px;
+  bottom: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 43px;
 }
-
 header .logo {
-    height: 53px;
+  height: 53px;
 }
-
 main {
-    position: absolute;
-    left: 0px;
-    top: 80px;
-    bottom: 80px;
-    height: 100%;
-    width: 100%;
-    background-color: #e5e5e5;
-    overflow-y: hidden;
-    overflow-y: scroll;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  bottom: 80px;
+  height: 100%;
+  width: 100%;
+  background-color: #e5e5e5;
+  overflow-y: hidden;
+  overflow-y: scroll;
 }
-
+main .msg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 40px;
+  width: 100%;
+  height: auto;
+  margin-top: 4px;
+  font-size: 14px;
+  font-family: roboto;
+  font-weight: 400;
+  font-style: normal;
+}
+main .message .message-inner-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 9px;
+  right: 9px;
+  height: auto;
+  max-width: calc(100% - 18px);
+}
+.status {
+  background-color: #dcdcdc;
+  border-radius: 2px;
+}
+.message {
+  background: #ffffff;
+  border-radius: 2px;
+}
+.private_message {
+  background: #ffdede;
+  border-radius: 2px;
+}
+.time {
+  max-width: 10%;
+  color: #aaaa;
+}
+.message-span {
+  position: absolute;
+  max-width: 78%;
+  height: auto;
+  left: 75px;
+}
+span .from {
+  font-weight: 700;
+}
+span .to {
+  font-weight: 700;
+}
 footer {
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    height: 80px;
-    width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
-    font-size: 26px;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 80px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+  font-size: 26px;
 }
-
 footer .footer-container {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    left: 18px;
-    right: 18px;
-    top: 25px;
-    bottom: 25px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 18px;
+  right: 18px;
+  top: 25px;
+  bottom: 25px;
 }
-
 input {
-    height: 30px;
-    width: 75%;
-    font-family: Roboto;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-    outline: none;
-    border: none;
+  height: 30px;
+  width: 75%;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  outline: none;
+  border: none;
 }
-
 input::placeholder {
-    font-family: Roboto;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 18px;
-    color: #000000;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+}
+.entry-screen {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #ffffff;
+}
+.entry-screen img {
+  position: absolute;
+  top: 72px;
+  height: 92px;
+}
+.entry-screen input {
+  position: absolute;
+  top: 258px;
+  height: 54px;
+  background-color: red;
+  background: #ffffff;
+  border: 1px solid #d7d7d7;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-align: center;
+}
+.entry-screen input::placeholder {
+  display: flex;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 139%;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #aeaeae;
+}
+.entry-screen button {
+  position: absolute;
+  top: 327px;
+  height: 45px;
+  background: #e7e7e7;
+  border-radius: 9px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 139%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #696969;
+  outline: none;
+  border: none;
 }
